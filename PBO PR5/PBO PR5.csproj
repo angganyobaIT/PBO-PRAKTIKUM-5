@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="karyawan.cs" />
+    <Compile Include="karyawan_kontrak.cs" />
+    <Compile Include="karyawan_magang.cs" />
+    <Compile Include="karyawan_tetap.cs" />
+    <Compile Include="object.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
