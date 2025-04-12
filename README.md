@@ -1,4 +1,4 @@
-Jadi secara keseluruhan kode yang saya dibuat mengandung 3 subclass dan 1 superclass, yang mana di masing masing subclass terdiri dari 1 method turunan yaitu method HitungGaji, dan didalam superclass terdapat 2 method yaitu TampilkanInfo dan HitungGaji
+Jadi secara keseluruhan kode yang saya buat mengandung 3 subclass dan 1 superclass, yang mana di masing masing subclass terdiri dari 1 method turunan yaitu method HitungGaji, dan didalam superclass terdapat 2 method yaitu TampilkanInfo dan HitungGaji
 
 3.1 Penjelasan source code Karyawan:
 Kelas karyawan memiliki 3 atribut dengan access modifier bertipe private hal tersebut ditandai dari penggunaan kata ”private” sebelum pemanggilan tipe data
