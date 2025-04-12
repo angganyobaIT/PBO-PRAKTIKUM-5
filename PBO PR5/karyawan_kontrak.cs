@@ -1,22 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PBO_PR5
 {
     public class KaryawanKontrak : Karyawan
     {
-        private int potonganKontrak = 200000;
+        private int potongan_Kontrak = 200000;
 
         public override double HitungGaji()
         {
-            return GajiPokok - potonganKontrak;
+            return Gaji_pokok - potongan_Kontrak;
         }
-        //public void TampilkanInfo()
-        //{
-
-        //}
+        
     }
 }

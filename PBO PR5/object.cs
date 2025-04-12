@@ -1,10 +1,4 @@
-﻿
-using System;
-using System.Linq.Expressions;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Policy;
-
+﻿using System;
 
 namespace PBO_PR5
 {
@@ -12,7 +6,7 @@ namespace PBO_PR5
     {
         static void Main()
         {
-            Karyawan karyawan = null; // Inisialisasi karyawan sebagai null
+            Karyawan karyawan = new Karyawan ();
 
             Console.Write("Masukkan nama karyawan: ");
             string nama = Console.ReadLine();
@@ -26,35 +20,47 @@ namespace PBO_PR5
             // Menentukan jenis karyawan berdasarkan ID
             if (id.ToLower().Contains("ktr"))
             {
-                karyawan = new KaryawanKontrak();
                 Console.WriteLine("ID Karyawan yang dimasukkan adalah Karyawan Kontrak");
+
+                if  (gajiPokok > 200000)
+                {
+                    karyawan = new KaryawanKontrak();
+                    karyawan.Nama = nama;
+                    karyawan.Id = id;
+                    karyawan.Gaji_pokok = gajiPokok;
+                    karyawan.TampilkanInfo();
+                }
+                else
+                { 
+                   Console.WriteLine("Gaji pokok yang diberikan tidak boleh kurang dari 200000");
+                    return;   
+                }  
             }
 
             else if (id.ToLower().Contains( "ttp"))
             {
                 karyawan = new karyawan_tetap();
                 Console.WriteLine("ID Karyawan yang dimasukkan adalah Karyawan Tetap");
-
+                karyawan.Nama = nama;
+                karyawan.Id = id;
+                karyawan.Gaji_pokok = gajiPokok;
+                karyawan.TampilkanInfo();
             }
+
             else if (id.ToLower().Contains("mgg"))
             {
                 karyawan = new karyawan_magang();
-                Console.WriteLine("ID Karyawan yang dimasukkan adalah Karyawan magang");
-            }
-
-            // Set properti karyawan
-            if (karyawan != null)
-            {
+                Console.WriteLine("ID Karyawan yang dimasukkan adalah Karyawan Magang");
                 karyawan.Nama = nama;
                 karyawan.Id = id;
-                karyawan.GajiPokok = gajiPokok;
-
-                // Tampilkan informasi karyawan
+                karyawan.Gaji_pokok = gajiPokok;
                 karyawan.TampilkanInfo();
             }
+
             else
             {
-                Console.WriteLine("ID karyawan tidak valid.");
+                Console.WriteLine("ID Karyawan yang di input tidak valid");
+                return;
             }
         }
     }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PBO_PR5
 {
@@ -24,7 +20,7 @@ namespace PBO_PR5
             set { _id = value; }
         }
 
-        public double GajiPokok
+        public double Gaji_pokok
         {
             get { return _gajiPokok; }
             set { _gajiPokok = value; }
@@ -32,7 +28,7 @@ namespace PBO_PR5
 
         public virtual double HitungGaji()
         {
-            return GajiPokok;
+            return Gaji_pokok;
         }
 
         public virtual void TampilkanInfo()
