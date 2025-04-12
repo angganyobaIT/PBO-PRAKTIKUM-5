@@ -4,7 +4,7 @@ namespace PBO_PR5
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             Karyawan karyawan = new Karyawan ();
 
