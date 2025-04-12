@@ -31,7 +31,7 @@ namespace PBO_PR5
             return Gaji_pokok;
         }
 
-        public virtual void TampilkanInfo()
+        public void TampilkanInfo()
         {
             Console.WriteLine("\n=== Informasi Penerimaan Gaji Karyawan ===");
             Console.WriteLine($"Nama       : {Nama}");

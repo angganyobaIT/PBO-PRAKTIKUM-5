@@ -2,9 +2,9 @@
 
 namespace PBO_PR5
 {
-    public class KaryawanKontrak : Karyawan
+    public class karyawan_kontrak : Karyawan
     {
-        private int potongan_Kontrak = 200000;
+        public int potongan_Kontrak = 200000;
 
         public override double HitungGaji()
         {

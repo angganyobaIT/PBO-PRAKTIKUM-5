@@ -24,7 +24,7 @@ namespace PBO_PR5
 
                 if  (gajiPokok > 200000)
                 {
-                    karyawan = new KaryawanKontrak();
+                    karyawan = new karyawan_kontrak();
                     karyawan.Nama = nama;
                     karyawan.Id = id;
                     karyawan.Gaji_pokok = gajiPokok;
